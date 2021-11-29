@@ -1,18 +1,17 @@
 <?php
 
-class BerlinClock{
 
-    //etape 1
 
+class BerlinClock
+{
     private function simpleMinutes(int $int):string
     {
         if($int === 1) return "YOOO";
         if($int === 2) return "YYOO";
         if($int === 3) return "YYYO";
         if($int === 4) return "YYYY";
-        return "";
+        return "OOOO";
     }
-    //etape 2 ( on fait par bloc de 5)
     private function fiveMinutes(int $int):string
     {
         if($int === 5 ) return "YOOOOOOOOOO";
@@ -26,10 +25,8 @@ class BerlinClock{
         if($int === 45) return "YYRYYRYYROO";
         if($int === 50) return "YYRYYRYYRYO";
         if($int === 55) return "YYRYYRYYRYY";
-        return "";
+        return "OOOOOOOOOOO";
     }
-
-    //la base
 
     public function minutes(int $int):string
     {
@@ -39,5 +36,6 @@ class BerlinClock{
         $resultFive = $this->fiveMinutes($fiveMinutes);
         return "[".$resultFive."][".$resultSimple."]";
     }
+
 
 }
