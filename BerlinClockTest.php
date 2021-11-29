@@ -179,6 +179,46 @@ class BerlinClockTest extends TestCase
         $actual = $this->minutes(40);
         $this->assertEquals("[YYRYYRYYOOO][OOOO]",$actual);
     }
+    public function testMinutesGiven41ShouldReturnYYRYYRYYOOOYOOO(){
+        $actual = $this->minutes(41);
+        $this->assertEquals("[YYRYYRYYOOO][YOOO]",$actual);
+    }
+    public function testMinutesGiven42ShouldReturnYYRYYRYYOOOYYOO(){
+        $actual = $this->minutes(42);
+        $this->assertEquals("[YYRYYRYYOOO][YYOO]",$actual);
+    }
+    public function testMinutesGiven43ShouldReturnYYRYYRYYOOOYYYO(){
+        $actual = $this->minutes(43);
+        $this->assertEquals("[YYRYYRYYOOO][YYYO]",$actual);
+    }
+    public function testMinutesGiven44ShouldReturnYYRYYRYYOOOYYYY(){
+        $actual = $this->minutes(44);
+        $this->assertEquals("[YYRYYRYYOOO][YYYY]",$actual);
+    }
+    public function testMinutesGiven45ShouldReturnYYRYYRYYROOOOOO(){
+        $actual = $this->minutes(45);
+        $this->assertEquals("[YYRYYRYYROO][OOOO]",$actual);
+    }
+    public function testMinutesGiven46ShouldReturnYYRYYRYYROOYOOO(){
+        $actual = $this->minutes(46);
+        $this->assertEquals("[YYRYYRYYROO][YOOO]",$actual);
+    }
+    public function testMinutesGiven47ShouldReturnYYRYYRYYROOYYOO(){
+        $actual = $this->minutes(47);
+        $this->assertEquals("[YYRYYRYYROO][OOOO]",$actual);
+    }
+    public function testMinutesGiven48ShouldReturnYYRYYRYYROOYYYO(){
+        $actual = $this->minutes(48);
+        $this->assertEquals("[YYRYYRYYROO][YYYO]",$actual);
+    }
+    public function testMinutesGiven49ShouldReturnYYRYYRYYROOYYYY(){
+        $actual = $this->minutes(49);
+        $this->assertEquals("[YYRYYRYYROO][YYYY]",$actual);
+    }
+    public function testMinutesGiven50ShouldReturnYYRYYRYYRYOOOOO(){
+        $actual = $this->minutes(50);
+        $this->assertEquals("[YYRYYRYYRYO][OOOO]",$actual);
+    }
 
 
     public function minutes(int $int): string {
