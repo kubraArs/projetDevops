@@ -39,10 +39,9 @@ class BerlinClock
         return "[".$resultFive."][".$resultSimple."]";
     }
 
-    public function clock($hour, $minutes, $seconds):String{
-        $hourResult = $this->hours($hour);
-        $minutesResult = $this->minutes($minutes);
-        $secondsResult = $this->seconds($seconds);
-        return $hourResult.$minutesResult.$secondsResult;
+    public function seconds(int $int):string
+    {
+        if($int%2 != 0) return "[O]";
+        return "[R]";
     }
 }
