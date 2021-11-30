@@ -34,8 +34,8 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[OOOOOOOOOOO][YYYY]",$actual);
     }
     public function testMinutesGiven5ShouldReturnYOOOOOOOOOO(){
-    $actual = $this->minutes(5);
-    $this->assertEquals("[YOOOOOOOOOO][OOOO]",$actual);
+        $actual = $this->minutes(5);
+        $this->assertEquals("[YOOOOOOOOOO][OOOO]",$actual);
     }
 
     public function testMinutesGiven6ShouldReturnYOOOOOOOOOOYOOO(){
@@ -115,8 +115,8 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[YYRYOOOOOOO][YYYY]",$actual);
     }
     public function testMinutesGiven25ShouldReturnYYRYYOOOOOOOOOO(){
-    $actual = $this->minutes(25);
-    $this->assertEquals("[YYRYYOOOOOO][OOOO]",$actual);
+        $actual = $this->minutes(25);
+        $this->assertEquals("[YYRYYOOOOOO][OOOO]",$actual);
     }
     public function testMinutesGiven26ShouldReturnYYRYYOOOOOOYOOO(){
         $actual = $this->minutes(26);
@@ -248,8 +248,8 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[YYRYYRYYRYY][YOOO]",$actual);
     }
     public function testMinutesGiven57ShouldReturnYYRYYRYYRYYYYOO(){
-    $actual = $this->minutes(57);
-    $this->assertEquals("[YYRYYRYYRYY][YYOO]",$actual);
+        $actual = $this->minutes(57);
+        $this->assertEquals("[YYRYYRYYRYY][YYOO]",$actual);
     }
     public function testMinutesGiven58ShouldReturnYYRYYRYYRYYYYYO(){
         $actual = $this->minutes(58);
@@ -289,5 +289,106 @@ class BerlinClockTest extends TestCase
     public function seconds(int $int):string{
         return $this->berlinClock->seconds($int);
     }
+    public function testHours1shouldReturnOOOOROOO() {
+        $actual =$this->hours(1);
+        $this->assertEquals("[OOOO][ROOO]",$actual);
+    }
+    public function testHours2shouldReturnOOOORROO() {
+        $actual =$this->hours(2);
+        $this->assertEquals("[OOOO][RROO]",$actual);
+    }
+    public function testHours3shouldReturnOOOORRRO() {
+        $actual =$this->hours(3);
+        $this->assertEquals("[OOOO][RRRO]",$actual);
+    }
+    public function testHours4shouldReturnOOOORRRR() {
+        $actual =$this->hours(4);
+        $this->assertEquals("[OOOO][RRRR]",$actual);
+    }
+    public function testHours5shouldReturnROOOOOOO() {
+        $actual =$this->hours(5);
+        $this->assertEquals("[ROOO][OOOO]",$actual);
+    }
+    public function testHours6shouldReturnROOOROOO() {
+        $actual =$this->hours(6);
+        $this->assertEquals("[ROOO][ROOO]",$actual);
+    }
+    public function testHours7shouldReturnROOORROO() {
+        $actual =$this->hours(7);
+        $this->assertEquals("[ROOO][RROO]",$actual);
+    }
+    public function testHours8shouldReturnROOORRRO() {
+        $actual =$this->hours(8);
+        $this->assertEquals("[ROOO][RRRO]",$actual);
+    }
+    public function testHours9shouldReturnROOORRRR() {
+        $actual =$this->hours(9);
+        $this->assertEquals("[ROOO][RRRR]",$actual);
+    }
+    public function testHours10shouldReturnRROOOOOO() {
+        $actual =$this->hours(10);
+        $this->assertEquals("[RROO][OOOO]",$actual);
+    }
+    public function testHours11shouldReturnRROOROOO() {
+        $actual =$this->hours(11);
+        $this->assertEquals("[RROO][ROOO]",$actual);
+    }
+    public function testHours12shouldReturnRROORROO() {
+        $actual =$this->hours(12);
+        $this->assertEquals("[RROO][RROO]",$actual);
+    }
+    public function testHours13shouldReturnRROORRRO() {
+        $actual =$this->hours(13);
+        $this->assertEquals("[RROO][RRRO]",$actual);
+    }
+    public function testHours14shouldReturnRROORRRR() {
+        $actual =$this->hours(14);
+        $this->assertEquals("[RROO][RRRR]",$actual);
+    }
+    public function testHours15shouldReturnRRROOOOO() {
+        $actual =$this->hours(15);
+        $this->assertEquals("[RRRO][OOOO]",$actual);
+    }
+    public function testHours16shouldReturnRRROROOO() {
+        $actual =$this->hours(16);
+        $this->assertEquals("[RRRO][ROOO]",$actual);
+    }
+    public function testHours17shouldReturnRRROORROO() {
+        $actual =$this->hours(17);
+        $this->assertEquals("[RRRO][RROO]",$actual);
+    }
+    public function testHours18shouldReturnRRRORRRO() {
+        $actual =$this->hours(18);
+        $this->assertEquals("[RRRO][RRRO]",$actual);
+    }
+    public function testHours19shouldReturnRRRORRRR() {
+        $actual =$this->hours(19);
+        $this->assertEquals("[RRRO][RRRR]",$actual);
+    }
+    public function testHours20shouldReturnRRRROOOO() {
+        $actual =$this->hours(20);
+        $this->assertEquals("[RRRR][OOOO]",$actual);
+    }
+    public function testHours21shouldReturnRRRRROOO() {
+        $actual =$this->hours(21);
+        $this->assertEquals("[RRRR][ROOO]",$actual);
+    }
+    public function testHours22shouldReturnRRRRRROO() {
+        $actual =$this->hours(22);
+        $this->assertEquals("[RRRR][RROO]",$actual);
+    }
+    public function testHours23shouldReturnRRRRRRRO() {
+        $actual =$this->hours(23);
+        $this->assertEquals("[RRRR][RRRO]",$actual);
+    }
+    public function testHours24shouldReturnRRRRRRRR() {
+        $actual =$this->hours(24);
+        $this->assertEquals("[RRRR][RRRR]",$actual);
+    }
+
+    public function hours(int $int): string {
+        return $this->berlinClock->hours($int);
+    }
+
 
 }
