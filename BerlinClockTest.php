@@ -369,11 +369,18 @@ class BerlinClockTest extends TestCase
 
 
 
-    public function testGiven1secondShouldReturnO(){
+    public function test1secondShouldReturnO(){
         $actual = $this->seconds(1);
 
         $this->assertEquals("[O]",$actual);
     }
+
+    public function test2secondShouldReturnR(){
+        $actual = $this->seconds(2);
+
+        $this->assertEquals("[R]",$actual);
+    }
+
 
 
 
