@@ -52,4 +52,12 @@ class BerlinClock
         if($int === 4) return "[RRRR]";
         return "[OOOO]";
     }
+    private function fiveHours(int $int):string
+    {
+        if($int === 5) return "[ROOO]";
+        if($int === 10) return "[RROO]";
+        if($int === 15) return "[RRRO]";
+        if($int === 20) return "[RRRR]";
+        return "[OOOO]";
+    }
 }
