@@ -349,6 +349,18 @@ class BerlinClockTest extends TestCase
         $actual =$this->hours(15);
         $this->assertEquals("[RRRO][OOOO]",$actual);
     }
+    public function testHours16shouldReturnRRROROOO() {
+        $actual =$this->hours(16);
+        $this->assertEquals("[RRRO][ROOO]",$actual);
+    }
+    public function testHours17shouldReturnRRROORROO() {
+        $actual =$this->hours(17);
+        $this->assertEquals("[RRRO][RROO]",$actual);
+    }
+    public function testHours18shouldReturnRRRORRRO() {
+        $actual =$this->hours(18);
+        $this->assertEquals("[RRRO][RRRO]",$actual);
+    }
     
 
 }
