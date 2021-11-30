@@ -383,7 +383,7 @@ class BerlinClockTest extends TestCase
 
     public function testSecond() {
 
-        for($i=1;$i<=60;$i++) {
+        for($i=0;$i<=59;$i++) {
             $actual = $this->seconds($i);
             if($i%2 === 0) {
                 $this->assertEquals("[R]",$actual);
