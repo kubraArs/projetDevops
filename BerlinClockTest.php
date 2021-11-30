@@ -406,5 +406,12 @@ class BerlinClockTest extends TestCase
 
         $this->assertEquals("[R][OOOO][ROOO][YYOOOOOOOOO][YOOO]",$actual);
     }
+    public function testAllClock2() {
+        $berlinClock = new berlinClock();
+
+        $actual = $berlinClock->clock(0,00,00);
+
+        $this->assertEquals("[R][OOOO][OOOO][OOOOOOOOOOO][OOOO]",$actual);
+    }
 
 }
