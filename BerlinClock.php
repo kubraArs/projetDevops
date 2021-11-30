@@ -79,6 +79,6 @@ class BerlinClock
         $hourRes = $this->hours($hour);
         $MinutesRes = $this->minutes($minutes);
         $secondsRes = $this->seconds($seconds);
-        return $hourRes.$MinutesRes.$secondsRes;
+        return $secondsRes.$hourRes.$MinutesRes;
     }
 }

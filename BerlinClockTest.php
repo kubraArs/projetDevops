@@ -392,19 +392,15 @@ class BerlinClockTest extends TestCase
             }
         }
     }
-
-
-
-
     public function seconds(int $int):string{
         return $this->berlinClock->seconds($int);
     }
     public function testClock1() {
         $berlinClock = new berlinClock();
 
-        $actual = $berlinClock->clock(1,11,12);
+        $actual = $berlinClock->clock(1,20,12);
 
-        $this->assertEquals("[R][OOOO][ROOO][YYOOOOOOOOO][YOOO]",$actual);
+        $this->assertEquals("[R][OOOO][ROOO][YYRYOOOOOOO][OOOO]",$actual);
     }
     public function testAllClock2() {
         $berlinClock = new berlinClock();
