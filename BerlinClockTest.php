@@ -389,6 +389,10 @@ class BerlinClockTest extends TestCase
     public function hours(int $int): string {
         return $this->berlinClock->hours($int);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 76d295fd5bd3af59358965569ddb45cf65475d56
 
 }

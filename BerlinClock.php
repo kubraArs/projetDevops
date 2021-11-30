@@ -69,4 +69,32 @@ class BerlinClock
         }
         return "[R]";
     }
+<<<<<<< HEAD
 }
+=======
+    private function simpleHours(int $int):string
+    {
+        if($int === 1) return "[ROOO]";
+        if($int === 2) return "[RROO]";
+        if($int === 3) return "[RRRO]";
+        if($int === 4) return "[RRRR]";
+        return "[OOOO]";
+    }
+    private function fiveHours(int $int):string
+    {
+        if($int === 5) return "[ROOO]";
+        if($int === 10) return "[RROO]";
+        if($int === 15) return "[RRRO]";
+        if($int === 20) return "[RRRR]";
+        return "[OOOO]";
+    }
+    public function hours(int $int):string
+    {
+        $simpleHours = $int%5;
+        $fiveHours = $int-$simpleHours;
+        $resultSimple = $this->simpleHours($simpleHours);
+        $resultFive = $this->fiveHours($fiveHours);
+        return $resultFive.$resultSimple;
+    }
+}
+>>>>>>> 76d295fd5bd3af59358965569ddb45cf65475d56
