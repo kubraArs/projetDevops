@@ -74,4 +74,11 @@ class BerlinClock
         }
         return "[R]";
     }
+    public function clock(int $hour,int $minutes,int $seconds): string
+    {
+        $hourRes = $this->hours($hour);
+        $MinutesRes = $this->minutes($minutes);
+        $secondsRes = $this->seconds($seconds);
+        return $hourRes.$MinutesRes.$secondsRes;
+    }
 }
