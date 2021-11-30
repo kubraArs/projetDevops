@@ -289,5 +289,6 @@ class BerlinClockTest extends TestCase
     public function seconds(int $int):string{
         return $this->berlinClock->seconds($int);
     }
+    
 
 }
